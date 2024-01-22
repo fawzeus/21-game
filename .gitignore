@@ -1,0 +1,5 @@
+.vscode
+main.o
+sfml-app
+test
+test.db
