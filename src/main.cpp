@@ -20,11 +20,11 @@ int main()
 {
 	sf::RenderWindow window(sf::VideoMode(1300, 700), "Blackjack Game", sf::Style::Titlebar | sf::Style::Close);
 	sf::Font arial;
-	arial.loadFromFile("../font/arial.ttf");
+	arial.loadFromFile("font/arial.ttf");
 
 	//setting Icon
 	auto image = sf::Image{};
-	if (image.loadFromFile("../images/icon.png"))
+	if (image.loadFromFile("images/icon.png"))
 	{
 		window.setIcon(image.getSize().x, image.getSize().y, image.getPixelsPtr());
 	}
@@ -32,7 +32,7 @@ int main()
 
 
 	sf::Texture back;
-	back.loadFromFile("../images/table1.jpg");
+	back.loadFromFile("images/table1.jpg");
 	sf::Sprite background(back);
 	sf::Text text1("Welcome To blackjack Game! ", arial), text2("please select the ships you want to bet", arial);
 	text1.setCharacterSize(30);
@@ -48,7 +48,7 @@ int main()
 	Jeton jetons[4];
 	for (int i = 0; i < 4; i++)
 	{
-		jet[i].loadFromFile("../images/" + to_string((int)pow(10, i)) + ".png");
+		jet[i].loadFromFile("images/" + to_string((int)pow(10, i)) + ".png");
 		jets[i].setTexture(jet[i]);
 		jetons[i] = Jeton(jets[i], (int)pow(10, i));
 		jetons[i].setPosition(30, 350 + 70 * i);
@@ -67,78 +67,78 @@ int main()
 	text4.setFillColor(sf::Color::Red);
 
 	sf::Texture clp, clnp;
-	clp.loadFromFile("../images/clear_pressed.png");
-	clnp.loadFromFile("../images/clear_notpressed.png");
+	clp.loadFromFile("images/clear_pressed.png");
+	clnp.loadFromFile("images/clear_notpressed.png");
 
 	sf::Sprite clpr(clp), clnpr(clnp);
 	Button clear(clnpr, clpr);
 	clear.setPosition(500, 500);
 
 	sf::Texture dp, dnp;
-	dp.loadFromFile("../images/done_pressed.png");
-	dnp.loadFromFile("../images/done_notpressed.png");
+	dp.loadFromFile("images/done_pressed.png");
+	dnp.loadFromFile("images/done_notpressed.png");
 
 	sf::Sprite dpr(dp), dpnr(dnp);
 	Button done(dpnr, dpr);
 	done.setPosition(700, 500);
 
 	sf::Texture htp, htnp;
-	htp.loadFromFile("../images/hit_pressed.png");
-	htnp.loadFromFile("../images/hit_notpressed.png");
+	htp.loadFromFile("images/hit_pressed.png");
+	htnp.loadFromFile("images/hit_notpressed.png");
 
 	sf::Sprite hitpress(htp), hitnotpress(htnp);
 	Button hit(hitnotpress, hitpress);
 	hit.setPosition(230, 360);
 
 	sf::Texture decktext;
-	decktext.loadFromFile("../images/deck.png");
+	decktext.loadFromFile("images/deck.png");
 	sf::Sprite deck(decktext);
 	deck.setPosition(10, 0);
 
 	sf::Texture stdp, stdnp;
-	stdp.loadFromFile("../images/stand_pressed.png");
-	stdnp.loadFromFile("../images/stand_notpressed.png");
+	stdp.loadFromFile("images/stand_pressed.png");
+	stdnp.loadFromFile("images/stand_notpressed.png");
 
 	sf::Sprite standp(stdp), standnp(stdnp);
 	Button stand(standnp, standp);
 	stand.setPosition(1000, 360);
 
 	sf::SoundBuffer dea;
-	dea.loadFromFile("../music/dealt.ogg");
+	dea.loadFromFile("music/dealt.ogg");
 	sf::Sound deal;
 	deal.setBuffer(dea);
 
 	sf::SoundBuffer snd;
-	snd.loadFromFile("../music/soundtrack.ogg");
+	snd.loadFromFile("music/soundtrack.ogg");
 	sf::Sound soundtrack;
 	soundtrack.setBuffer(snd);
 
 	sf::SoundBuffer fai;
-	fai.loadFromFile("../music/fail.wav");
+	fai.loadFromFile("music/fail.wav");
 	sf::Sound fail;
 	fail.setBuffer(fai);
 
 	sf::SoundBuffer vic;
-	vic.loadFromFile("../music/victory.wav");
+	vic.loadFromFile("music/victory.wav");
 	sf::Sound victory;
 	victory.setBuffer(vic);
 
 	sf::SoundBuffer inv;
-	inv.loadFromFile("../music/invalid.ogg");
+	inv.loadFromFile("music/invalid.ogg");
 	sf::Sound invalid;
 	invalid.setBuffer(inv);
 
 	sf::Texture tnop, tnonp;
-	tnop.loadFromFile("../images/no_pressed.png");
-	tnonp.loadFromFile("../images/no_notpressed.png");
+	tnop.loadFromFile("images/no_pressed.png");
+	tnonp.loadFromFile("images/no_notpressed.png");
 	sf::Sprite snop(tnop), snonp(tnonp);
 
 	Button no(snonp, snop);
 	no.setPosition(500, 500);
 
 	sf::Texture tyesp, tyesnp;
-	tyesp.loadFromFile("../images/yes_pressed.png");
-	tyesnp.loadFromFile("../images/yes_notpressed.png");
+	tyesp.loadFromFile("images/yes_pressed.png");
+	tyesnp.loadFromFile("images/yes_notpressed.png");
 	sf::Sprite syesp(tyesp), syesnp(tyesnp);
 
 	Button yes(syesnp, syesp);

@@ -4,7 +4,7 @@ This is a Black Jack Game developed using C++ and the SFML library.
 
 ## How to Start
 
-To run the program, simply execute the `run.sh` script using `./run.sh` in your terminal.
+To run the program, simply run `make` in your terminal then run`./sfml-app` in your terminal.
 
 ## Description
 

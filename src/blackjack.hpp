@@ -217,12 +217,12 @@ public:
 
 		sf::Texture hiden;
 		sf::Sprite hiden_spirite;
-		hiden.loadFromFile("../images/cardBack.png");
+		hiden.loadFromFile("images/cardBack.png");
 		hiden_spirite.setTexture(hiden);
 		hiden_spirite.setPosition(300, 30);
 		window.draw(hiden_spirite);
 		sf::Texture cp1;
-		cp1.loadFromFile("../images/" + dealer[1].get_rank() + "_of_" + dealer[1].get_suit() + ".png");
+		cp1.loadFromFile("images/" + dealer[1].get_rank() + "_of_" + dealer[1].get_suit() + ".png");
 		sf::Sprite crd1;
 		crd1.setTexture(cp1);
 		crd1.setPosition(500, 30);
@@ -237,7 +237,7 @@ public:
 		}
 		for (unsigned i = 0; i < player.size(); i++)
 		{
-			text[i].loadFromFile("../images/" + player[i].get_rank() + "_of_" + player[i].get_suit() + ".png");
+			text[i].loadFromFile("images/" + player[i].get_rank() + "_of_" + player[i].get_suit() + ".png");
 			out[i].setTexture(text[i]);
 			out[i].setPosition(300 + distance * i, 450);
 			window.draw(out[i]);
@@ -279,7 +279,7 @@ public:
 		}
 		for (unsigned i = 0; i < dealer.size(); i++)
 		{
-			t[i].loadFromFile("../images/" + dealer[i].get_rank() + "_of_" + dealer[i].get_suit() + ".png");
+			t[i].loadFromFile("images/" + dealer[i].get_rank() + "_of_" + dealer[i].get_suit() + ".png");
 			//cout << dealer[i].get_rank() << "_of_" << dealer[i].get_suit() << endl;
 			t1[i].setTexture(t[i]);
 			t1[i].setPosition(300 + distance * i, 30);
@@ -293,7 +293,7 @@ public:
 		}
 		for (unsigned i = 0; i < player.size(); i++)
 		{
-			t[i].loadFromFile("../images/" + player[i].get_rank() + "_of_" + player[i].get_suit() + ".png");
+			t[i].loadFromFile("images/" + player[i].get_rank() + "_of_" + player[i].get_suit() + ".png");
 			t1[i].setTexture(t[i]);
 			t1[i].setPosition(300 + distance * i, 450);
 			window.draw(t1[i]);
